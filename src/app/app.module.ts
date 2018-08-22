@@ -1,13 +1,16 @@
+//To create new component via cli -> ng g c componentName
+
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { CoursesComponent } from './courses.component';
+import { CourseComponent } from './course/course.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    CoursesComponent //Import ALL modules here 
+    CourseComponent
   ],
   imports: [
     BrowserModule
