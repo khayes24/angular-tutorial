@@ -1,5 +1,6 @@
 //Import angular
 import { Component } from '@angular/core';
+import { CoursesService } from './courses.service';
 //Declarator Function
 @Component({
   selector: 'courses', //<courses> "course"  //<div class="courses"> ".course"
@@ -16,11 +17,15 @@ import { Component } from '@angular/core';
 
 export class CoursesComponent {
   title = "List of courses";
+  courses;
 
-  courses = ["course1", "course2", "course3"];
+  //Angular automatically instatiates service by having it in constructor
+  constructor(service: CoursesService){
+    this.courses = service.getCourses();
+  }
 
   //Getter function
   getTitle(){
-  return this.title;
-}
+    return this.title;
+  }
 }
