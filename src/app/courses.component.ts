@@ -6,16 +6,12 @@ import { CoursesService } from './courses.service';
   selector: 'courses', //<courses> "course"  //<div class="courses"> ".course"
   //Using the backtick in the template attribute allows code to be broken up into multiple lines
   template: `
-  <h2>{{ getTitle() }}</h2>
-  <ul>
-    <li *ngFor="let course of courses">
-      {{course}}
-    </li>
-  </ul>
+    <button class="btn btn-primary" [style.backgroundColor]="isActive ? 'blue' : 'white'">Save</button>
   `
 })
 
 export class CoursesComponent {
+  isActive = false;
   title = "List of courses";
   courses;
 
