@@ -7,8 +7,16 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./favorite.component.css']
 })
 export class FavoriteComponent implements OnInit {
+
+  //Variable for class
+  isFavorite: boolean;
+
+  //For FA-Icon
   faStar = faStar;
-  constructor() { }
+
+  onClick(){
+    this.isFavorite = !this.isFavorite;
+  }
 
   ngOnInit() {
   }

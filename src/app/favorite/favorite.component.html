@@ -1,3 +1,8 @@
 <h2>Kam</h2>
 <!-- simple name only that assumes the 'fas' prefix -->
-<fa-icon [icon]="faStar"></fa-icon>
+<span [ngClass]="{
+  'favorite': isFavorite,
+  'favorite-empty': !isFavorite
+}"
+(click)="onClick()"
+><fa-icon [icon]="faStar"></fa-icon></span>
